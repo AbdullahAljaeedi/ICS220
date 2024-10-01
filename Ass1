@@ -1,0 +1,357 @@
+from enum import Enum
+
+# Enum for Gender
+class Gender(Enum):
+    MALE = "Male"
+    FEMALE = "Female"
+    OTHER = "Other"
+
+# Enum for Payment Currency
+class PaymentCurrency(Enum):
+    USD = "USD"
+    EUR = "EUR"
+    AED = "AED"
+    GBP = "GBP"
+    JPY = "JPY"
+
+# User Class
+class User:
+    def __init__(self, first_name, last_name, date_of_birth, email, phone, place_of_origin, gender, race, user_id, address):
+        self.__first_name = first_name  # User's first name
+        self.__last_name = last_name  # User's last name
+        self.__date_of_birth = date_of_birth  # User's date of birth
+        self.__email = email  # User's email
+        self.__phone = phone  # User's phone number
+        self.__place_of_origin = place_of_origin  # User's place of origin
+        self.__gender = gender  # User's gender (using Gender Enum)
+        self.__race = race  # User's race
+        self.__user_id = user_id  # User's social number
+        self.__address = address  # User's address
+
+
+    def login(self):
+        pass  # Placeholder for login functionality
+
+    # Getters and Setters
+    def get_first_name(self):
+        return self.__first_name
+
+    def set_first_name(self, first_name):
+        self.__first_name = first_name
+
+    def get_last_name(self):
+        return self.__last_name
+
+    def set_last_name(self, last_name):
+        self.__last_name = last_name
+
+    def get_date_of_birth(self):
+        return self.__date_of_birth
+
+    def set_date_of_birth(self, date_of_birth):
+        self.__date_of_birth = date_of_birth
+
+    def get_email(self):
+        return self.__email
+
+    def set_email(self, email):
+        self.__email = email
+
+    def get_phone(self):
+        return self.__phone
+
+    def set_phone(self, phone):
+        self.__phone = phone
+
+    def get_place_of_origin(self):
+        return self.__place_of_origin
+
+    def set_place_of_origin(self, place_of_origin):
+        self.__place_of_origin = place_of_origin
+
+    def get_gender(self):
+        return self.__gender
+
+    def set_gender(self, gender):
+        self.__gender = gender
+
+    def get_race(self):
+        return self.__race
+
+    def set_race(self, race):
+        self.__race = race
+
+    def get_address(self):
+        return self.__address
+
+    def set_address(self, address):
+        self.__address = address
+
+    def get_user_id(self):
+        return self.__user_id
+
+    def set_user_id(self, user_id):
+        self.__user_id = user_id
+
+    def display_user_info(self):
+        print(f"User ID: {self.__user_id}, Name: {self.__first_name} {self.__last_name}, DOB: {self.__date_of_birth}, Email: {self.__email}, Phone: {self.__phone}, Place of Origin: {self.__place_of_origin}, Gender: {self.__gender}, Race: {self.__race}, Address: {self.__address}")
+
+# Hotel Class
+class Hotel:
+    def __init__(self, hotel_name, capacity, hotel_phone, email, stars, available_rooms):
+        self.__hotel_name = hotel_name  # Name of the hotel
+        self.__capacity = capacity  # Capacity of the hotel
+        self.__hotel_phone = hotel_phone  # Hotel phone number
+        self.__email = email  # Hotel email
+        self.__stars = stars  # Hotel stars
+        self.__available_rooms = available_rooms  # Number of available rooms
+
+    def select_hotel(self):
+        pass  # Placeholder for selecting the hotel
+
+    def show_available_rooms(self):
+        pass  # Placeholder for functionality to show available rooms
+
+    # Getters and Setters
+    def get_hotel_name(self):
+        return self.__hotel_name
+
+    def set_hotel_name(self, hotel_name):
+        self.__hotel_name = hotel_name
+
+    def get_capacity(self):
+        return self.__capacity
+
+    def set_capacity(self, capacity):
+        self.__capacity = capacity
+
+    def get_hotel_phone(self):
+        return self.__hotel_phone
+
+    def set_hotel_phone(self, hotel_phone):
+        self.__hotel_phone = hotel_phone
+
+    def get_email(self):
+        return self.__email
+
+    def set_email(self, email):
+        self.__email = email
+
+    def get_stars(self):
+        return self.__stars
+
+    def set_stars(self, stars):
+        self.__stars = stars
+
+    def get_available_rooms(self):
+        return self.__available_rooms
+
+    def set_available_rooms(self, available_rooms):
+        self.__available_rooms = available_rooms
+
+    def display_hotel_info(self):
+        print(f"Hotel Name: {self.__hotel_name}, Capacity: {self.__capacity}, Phone: {self.__hotel_phone}, Email: {self.__email}, Stars: {self.__stars}, Available Rooms: {self.__available_rooms}")
+
+# Room Class
+class Room:
+    def __init__(self, room_number, price, size, floor_number, sea_view, is_available):
+        self.__room_number = room_number  # Room number
+        self.__price = price  # Price of the room
+        self.__size = size  # Size of the room
+        self.__floor_number = floor_number  # Floor number
+        self.__sea_view = sea_view  # Whether the room has a sea view
+        self.__is_available = is_available  # Availability of the room
+
+    def book_room(self):
+        pass  # Placeholder for room booking functionality
+
+    def cancel_booking(self):
+        pass  # Placeholder for canceling the booking functionality
+
+    # Getters and Setters
+    def get_room_number(self):
+        return self.__room_number
+
+    def set_room_number(self, room_number):
+        self.__room_number = room_number
+
+    def get_price(self):
+        return self.__price
+
+    def set_price(self, price):
+        self.__price = price
+
+    def get_size(self):
+        return self.__size
+
+    def set_size(self, size):
+        self.__size = size
+
+    def get_floor_number(self):
+        return self.__floor_number
+
+    def set_floor_number(self, floor_number):
+        self.__floor_number = floor_number
+
+    def get_sea_view(self):
+        return self.__sea_view
+
+    def set_sea_view(self, sea_view):
+        self.__sea_view = sea_view
+
+    def get_is_available(self):
+        return self.__is_available
+
+    def set_is_available(self, is_available):
+        self.__is_available = is_available
+
+    def display_room_info(self):
+        print(f"Room Number: {self.__room_number}, Price: {self.__price}, Size: {self.__size}, Floor: {self.__floor_number}, Sea View: {self.__sea_view}, Available: {self.__is_available}")
+
+# Reservation Class
+class Reservation:
+    def __init__(self, user_name, room_number, check_in_date, check_out_date):
+        self.__user_name = user_name  # User's name
+        self.__room_number = room_number  # Room number being reserved
+        self.__check_in_date = check_in_date  # Check-in date
+        self.__check_out_date = check_out_date  # Check-out date
+
+    def get_reservation_details(self):
+        pass  # Placeholder for functionality to get reservation details
+
+    # Getters and Setters
+    def get_user_name(self):
+        return self.__user_name
+
+    def set_user_name(self, user_name):
+        self.__user_name = user_name
+
+    def get_room_number(self):
+        return self.__room_number
+
+    def set_room_number(self, room_number):
+        self.__room_number = room_number
+
+    def get_check_in_date(self):
+        return self.__check_in_date
+
+    def set_check_in_date(self, check_in_date):
+        self.__check_in_date = check_in_date
+
+    def get_check_out_date(self):
+        return self.__check_out_date
+
+    def set_check_out_date(self, check_out_date):
+        self.__check_out_date = check_out_date
+
+    def display_reservation_info(self):
+        print(f"Guest: {self.__user_name}, Room Number: {self.__room_number}, Check-in: {self.__check_in_date}, Check-out: {self.__check_out_date}")
+
+# Price Class
+class Price:
+    def __init__(self, payment_id, payment_currency, amount, payment_method, discount_applied):
+        self.__payment_id = payment_id  # Unique identifier for the payment
+        self.__payment_currency = payment_currency  # Currency of the payment (using PaymentCurrency Enum)
+        self.__amount = amount  # Amount of the payment
+        self.__payment_method = payment_method  # Method of payment (e.g., Credit Card, Cash)
+        self.__discount_applied = discount_applied  # Discount applied to the payment
+
+    def apply_discount(self, discount_percentage):
+        pass  # Placeholder for functionality to apply discount
+
+    def calculate_total_amount(self):
+        pass  # Placeholder for functionality to calculate the total amount after discounts
+
+    def process_payment(self):
+        pass  # Placeholder for functionality to process the payment
+
+    # Getters and Setters
+    def get_payment_id(self):
+        return self.__payment_id
+
+    def set_payment_id(self, payment_id):
+        self.__payment_id = payment_id
+
+    def get_payment_currency(self):
+        return self.__payment_currency
+
+    def set_payment_currency(self, payment_currency):
+        self.__payment_currency = payment_currency
+
+    def get_amount(self):
+        return self.__amount
+
+    def set_amount(self, amount):
+        self.__amount = amount
+
+    def get_payment_method(self):
+        return self.__payment_method
+
+    def set_payment_method(self, payment_method):
+        self.__payment_method = payment_method
+
+    def get_discount_applied(self):
+        return self.__discount_applied
+
+    def set_discount_applied(self, discount_applied):
+        self.__discount_applied = discount_applied
+
+    def display_payment_info(self):
+        print(f"Payment ID: {self.__payment_id}, Currency: {self.__payment_currency}, Amount: {self.__amount}, Method: {self.__payment_method}, Discount: {self.__discount_applied}")
+
+
+# Create User Objects and tests
+user1 = User("Abdullah", "AlJaeedi", "12-7-2001", "XD123@example.com", "1234567890", "USA", Gender.MALE.value, "Caucasian", "12345", "AD, Al faleh")
+user2 = User("Ayaka", "Komosto", "4-14-2003", "Ayaka555h@example.com", "0987654321", "Japan", Gender.FEMALE.value, "Asian", "6789", "Japan tokyo")
+user3 = User("Chad", "Johnson", "3-7-1992", "Strongman420@example.com", "1122334455", "brazil", Gender.MALE.value, "Hispanic", "1010", "USA, Texas")
+user4 = User("Emily", "Davis", "3-1-2000", "imher00@example.com", "2233445566", "Chad", Gender.FEMALE.value, "African", "45321", "Chad")
+
+# Create Hotel Objects
+hotel1 = Hotel("Grand Hotel", 100, "555-0101", "info@grandhotel.com", 5, 20)
+hotel2 = Hotel("City Inn", 50, "555-0202", "contact@cityinn.com", 4, 15)
+hotel3 = Hotel("Beach Resort", 200, "555-0303", "hello@beachresort.com", 5, 35)
+hotel4 = Hotel("Mountain Lodge", 75, "555-0404", "info@mountainlodge.com", 3, 10)
+
+# Create Room Objects
+room1 = Room(101, 150.0, "30m²", 1, True, True)
+room2 = Room(102, 200.0, "35m²", 1, False, True)
+room3 = Room(201, 250.0, "40m²", 2, True, False)
+room4 = Room(202, 300.0, "45m²", 2, True, True)
+
+# Create Reservation Objects
+reservation1 = Reservation("Abdullah", 101, "2024-10-01", "2024-10-05")
+reservation2 = Reservation("Ayaka", 102, "2024-10-10", "2024-10-15")
+reservation3 = Reservation("Chad", 201, "2024-11-01", "2024-11-07")
+reservation4 = Reservation("Emily", 202, "2024-11-10", "2024-11-12")
+
+# Create Price Objects
+price1 = Price("P001", PaymentCurrency.USD.value, 600.0, "Credit Card", 10.0)
+price2 = Price("P002", PaymentCurrency.EUR.value, 800.0, "Cash", 15.0)
+price3 = Price("P003", PaymentCurrency.AED.value, 1000.0, "Debit Card", 5.0)
+price4 = Price("P004", PaymentCurrency.GBP.value, 750.0, "Credit Card", 20.0)
+
+# Display Information for Each Object
+user1.display_user_info()
+user2.display_user_info()
+user3.display_user_info()
+user4.display_user_info()
+
+hotel1.display_hotel_info()
+hotel2.display_hotel_info()
+hotel3.display_hotel_info()
+hotel4.display_hotel_info()
+
+room1.display_room_info()
+room2.display_room_info()
+room3.display_room_info()
+room4.display_room_info()
+
+reservation1.display_reservation_info()
+reservation2.display_reservation_info()
+reservation3.display_reservation_info()
+reservation4.display_reservation_info()
+
+price1.display_payment_info()
+price2.display_payment_info()
+price3.display_payment_info()
+price4.display_payment_info()
